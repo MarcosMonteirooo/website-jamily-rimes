@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamily Rimes | Portfólio</title>
+  <meta name="description" content="Portfólio de Jamily Rimes, 20 anos, de Nova Friburgo - RJ. Experiência em atendimento, vendas e rotinas administrativas.">
+  <meta name="theme-color" content="#e8cac6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- ===== BARRA LATERAL (perfil) ===== -->
+    <aside class="sidebar">
+      <div class="sidebar__inner">
+        <div class="avatar">
+          <img src="img/jamily.jpg" alt="Foto de Jamily Rimes">
+        </div>
+
+        <h1 class="sidebar__name">Jamily Rimes</h1>
+        <p class="sidebar__role">Atendimento &amp; Vendas</p>
+        <p class="sidebar__meta">20 anos · Nova Friburgo, RJ</p>
+
+        <nav class="tabs" id="tabs" aria-label="Seções do portfólio" role="tablist">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="sobre" data-target="sobre">Sobre mim</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="experiencia" data-target="experiencia">Experiência</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="formacao" data-target="formacao">Formação</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="cursos" data-target="cursos">Cursos</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="contato" data-target="contato">Contato</button>
+        </nav>
+
+        <a class="btn btn--download" href="Curriculo-Jamily-Rimes.pdf" download="Curriculo-Jamily-Rimes.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Baixar currículo (PDF)
+        </a>
+      </div>
+    </aside>
+
+    <!-- ===== CONTEÚDO ===== -->
+    <main class="content">
+
+      <!-- SOBRE MIM -->
+      <section id="sobre" class="panel is-active" role="tabpanel">
+        <p class="eyebrow">Olá, eu sou a</p>
+        <h2 class="hero-title">Jamily Rimes</h2>
+
+        <h3 class="section-title">Sobre mim</h3>
+        <p class="about-text">
+          Tenho grande disposição para o aprendizado. Capaz de oferecer um serviço de qualidade
+          através de conhecimentos práticos e boas habilidades interpessoais, visando o
+          desenvolvimento profissional.
+        </p>
+
+        <ul class="facts">
+          <li><span>Idade</span><strong>20 anos</strong></li>
+          <li><span>Cidade</span><strong>Nova Friburgo, RJ</strong></li>
+          <li><span>Habilitação</span><strong>CNH AB</strong></li>
+          <li><span>Em formação</span><strong>Logística e Segurança no Trabalho</strong></li>
+        </ul>
+
+        <div class="cta-row">
+          <button class="btn" data-goto="experiencia">Ver experiência</button>
+          <button class="btn btn--ghost" data-goto="contato">Entrar em contato</button>
+        </div>
+      </section>
+
+      <!-- EXPERIÊNCIA -->
+      <section id="experiencia" class="panel" role="tabpanel" hidden>
+        <h3 class="section-title">Experiência</h3>
+
+        <div class="timeline">
+          <article class="job">
+            <header>
+              <h4>Recepcionista</h4>
+              <p class="job__place">Smart Fit Friburgo</p>
+              <span class="job__date">Nov/2025 – Maio/2026</span>
+            </header>
+            <ul>
+              <li><strong>Atendimento e Vendas:</strong> esclarecer dúvidas de visitantes, fazer tours pelas instalações e negociar pacotes (vendas consultivas).</li>
+              <li>Checar o check-in dos alunos, gerenciar pagamentos, emitir recibos e auxiliar na cobrança de mensalidades em atraso.</li>
+              <li>Manter o ambiente organizado, orientar sobre horários de aulas e auxiliar os professores ou a gerência conforme necessário.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <header>
+              <h4>Aprendiz Administrativo</h4>
+              <p class="job__place">Transfree</p>
+              <span class="job__date">Nov/2023 – Fev/2025</span>
+            </header>
+            <ul>
+              <li>Recepcionar clientes, atendendo ligações e direcionando recados.</li>
+              <li>Digitação de relatórios e preenchimento de planilhas de controle.</li>
+              <li>Suporte aos departamentos de Recursos Humanos, Financeiro ou Recepção conforme a demanda.</li>
+              <li>Manutenção e arquivamento de registros.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <header>
+              <h4>Estágio em Vendas</h4>
+              <p class="job__place">Fábrica de Bolos Vó Alzira</p>
+              <span class="job__date">Dez/2022 – Ago/2023</span>
+            </header>
+            <ul>
+              <li>Orientar os clientes na escolha do bolo ideal para o dia a dia ou eventos, informando ingredientes e tamanhos adequados.</li>
+              <li>Receber pedidos, responder dúvidas sobre cardápios, preços e formas de pagamento, além de atender pelo WhatsApp.</li>
+              <li>Registrar vendas, emitir notas e processar pagamentos.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- FORMAÇÃO -->
+      <section id="formacao" class="panel" role="tabpanel" hidden>
+        <h3 class="section-title">Formação</h3>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__date">2026 – Momento</span>
+            <h4>Logística</h4>
+            <p>CIEB</p>
+          </article>
+          <article class="card">
+            <span class="card__date">2026 – Momento</span>
+            <h4>Segurança no Trabalho</h4>
+            <p>Universidade Unopar</p>
+          </article>
+          <article class="card">
+            <span class="card__date">2021 – 2023</span>
+            <h4>Ensino médio</h4>
+            <p>Dr. Tuffy El Jaick</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CURSOS -->
+      <section id="cursos" class="panel" role="tabpanel" hidden>
+        <h3 class="section-title">Cursos</h3>
+
+        <ul class="course-list">
+          <li><span class="dot"></span><div><h4>Comunicação Interpessoal e Atendimento ao Cliente</h4><p>Sest Senat</p></div></li>
+          <li><span class="dot"></span><div><h4>Ética e Relacionamento no Trabalho</h4><p>Sest Senat</p></div></li>
+          <li><span class="dot"></span><div><h4>Comunicação e Resolução de Conflitos</h4><p>Sest Senat</p></div></li>
+          <li><span class="dot"></span><div><h4>Primeiros Socorros</h4><p>Sest Senat</p></div></li>
+          <li><span class="dot"></span><div><h4>Excel Intermediário</h4><p>Sest Senat</p></div></li>
+        </ul>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="panel" role="tabpanel" hidden>
+        <h3 class="section-title">Contato</h3>
+        <p class="about-text">Vamos conversar? Fico à disposição por telefone, WhatsApp ou e-mail.</p>
+
+        <div class="contact-list">
+          <a class="contact" href="tel:+5522981504873">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span><small>Telefone</small><strong>(22) 98150-4873</strong></span>
+          </a>
+
+          <a class="contact" href="https://wa.me/5522981504873" target="_blank" rel="noopener">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4.1A8 8 0 1112 20a8 8 0 01-3.9-1L4 20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span><small>WhatsApp</small><strong>Chamar no WhatsApp</strong></span>
+          </a>
+
+          <a class="contact" href="mailto:jamiilyrimes@gmail.com">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span><small>E-mail</small><strong>jamiilyrimes@gmail.com</strong></span>
+          </a>
+
+          <div class="contact">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z M12 12a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span><small>Localização</small><strong>Nova Friburgo, RJ</strong></span>
+          </div>
+
+          <div class="contact">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM7 10h4M7 14h6M16 10h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span><small>Habilitação</small><strong>CNH AB</strong></span>
+          </div>
+        </div>
+
+        <a class="btn btn--download btn--inline" href="Curriculo-Jamily-Rimes.pdf" download="Curriculo-Jamily-Rimes.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Baixar currículo (PDF)
+        </a>
+      </section>
+
+      <footer class="footer">
+  <p>© <span id="year">2026</span> Jamily Rimes · Nova Friburgo, RJ</p>
+  <p class="footer__credits">
+    Site desenvolvido por
+    <a href="https://github.com/MarcosMonteirooo" target="_blank" rel="noopener noreferrer">
+      Marcos Davi
+    </a>
+  </p>
+</footer>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
