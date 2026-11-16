@@ -1,9 +1,3 @@
-/* =========================================================
-   Portfólio Jamily Rimes
-   Identidade baseada no currículo: rosa-claro, serifada
-   elegante nos títulos e sans-serif limpa no texto.
-   ========================================================= */
-
 :root {
   --rose: #e8cac6;        /* barra lateral do currículo */
   --rose-deep: #d4a8a2;
@@ -20,7 +14,10 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;   /* CORRIGIDO: evita o iPhone aumentar o texto sozinho */
+}
 
 body {
   margin: 0;
@@ -39,7 +36,9 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Layout principal ---------- */
 .layout {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  /* CORRIGIDO: era "360px 1fr". O minmax(0, 1fr) deixa a coluna encolher
+     e impede que o conteúdo (ex.: as abas) alargue a página. */
+  grid-template-columns: 360px minmax(0, 1fr);
   min-height: 100vh;
 }
 
@@ -176,6 +175,7 @@ button { font: inherit; cursor: pointer; }
   padding: 72px clamp(24px, 6vw, 96px) 40px;
   max-width: 980px;
   width: 100%;
+  min-width: 0;                     /* CORRIGIDO: deixa o conteúdo encolher junto com a tela */
 }
 
 .panel { display: none; animation: fadeUp .5s ease both; }
@@ -200,6 +200,7 @@ button { font: inherit; cursor: pointer; }
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin: 4px 0 40px;
+  overflow-wrap: break-word;        /* CORRIGIDO: segurança para telas muito estreitas */
 }
 
 .section-title {
@@ -310,7 +311,8 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Formação ---------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  /* CORRIGIDO: min(230px, 100%) evita estourar em telas menores que 230px */
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
   gap: 18px;
 }
 
@@ -362,7 +364,8 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Contato ---------- */
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* CORRIGIDO: min(260px, 100%) evita estourar em telas bem estreitas */
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 14px;
   margin-top: 28px;
 }
@@ -413,13 +416,36 @@ a.contact:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(120,
   color: var(--ink-soft);
 }
 
+.footer__credits {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.footer__credits a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity .2s;
+}
+
+.footer__credits a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* =========================================================
    RESPONSIVO
    ========================================================= */
 
 /* Tablet e celular: a barra lateral vira um topo */
 @media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; }
+  /* CORRIGIDO: era "1fr". Esta é a linha que resolve o zoom/rolagem lateral. */
+  .layout { grid-template-columns: minmax(0, 1fr); }
+
+  /* CORRIGIDO: permite que a barra e o conteúdo encolham até a largura da tela */
+  .sidebar,
+  .content { min-width: 0; }
 
   .sidebar {
     position: static;
@@ -452,7 +478,8 @@ a.contact:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(120,
   .tab { flex-shrink: 0; font-size: 1.05rem; padding: 9px 18px; }
 
   /* O botão de download sai do topo e fica logo abaixo das abas */
-  .btn--download { margin: 16px 0 24px; }
+  /* CORRIGIDO: restrito à barra lateral, para não mexer no botão da aba Contato */
+  .sidebar .btn--download { margin: 16px 0 24px; }
 
   .content { padding: 40px 22px 32px; max-width: none; }
 }
@@ -471,23 +498,4 @@ a.contact:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(120,
   html { scroll-behavior: auto; }
   .panel { animation: none; }
   * { transition: none !important; }
-}
-
-
-.footer__credits {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    opacity: 0.75;
-}
-
-.footer__credits a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 600;
-    transition: opacity .2s;
-}
-
-.footer__credits a:hover {
-    opacity: 1;
-    text-decoration: underline;
 }
